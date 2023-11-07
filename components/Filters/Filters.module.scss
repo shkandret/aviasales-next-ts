@@ -1,0 +1,55 @@
+@import "@/styles/variables.scss";
+
+.filters {
+  font-size: $size-small;
+  display: flex;
+  border: 1px solid rgba(223, 229, 236, 1);
+  border-radius: 5px;
+  & div:first-child {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-right: 1px solid rgba(223, 229, 236, 1);
+  }
+
+  & div:last-child {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-left: 1px solid rgba(223, 229, 236, 1);
+  }
+
+  &-active {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+    height: 50px;
+    background-color: $color-blue;
+    color: $color-white;
+  }
+
+  &__item {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+    height: 50px;
+    background-color: $color-white;
+    color: $color-black;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .filters {
+    &__item {
+      text-align: center;
+      width: 100%;
+    }
+
+    &-active {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
